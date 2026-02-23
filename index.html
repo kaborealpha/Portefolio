@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alphonse KABORE · Ingénieur Statisticien Économiste | Data Scientist</title>
+  <meta name="description" content="Alphonse KABORE — Ingénieur Statisticien Économiste, Data Scientist à Ouagadougou, Burkina Faso. Expert R, Python, Power BI, Machine Learning, Économétrie."/>
+  <meta name="keywords" content="Data Scientist Burkina Faso, Statisticien Économiste, Analyste données, Machine Learning, R Python, ISSP, Ouagadougou, Alphonse Kabore"/>
+  <meta name="author" content="Alphonse KABORE"/>
+  <meta name="robots" content="index, follow"/>
+  <meta property="og:title" content="Alphonse KABORE · Data Scientist & Statisticien Économiste"/>
+  <meta property="og:description" content="Spécialiste en analyse de données, modélisation statistique et intelligence artificielle. Ouvert aux opportunités mondiales."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="fr_FR"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Alphonse KABORE · Data Scientist"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Alphonse KABORE","jobTitle":"Ingénieur Statisticien Économiste / Data Scientist","description":"Spécialiste en analyse de données, modélisation statistique, machine learning et visualisation interactive.","email":"kaborealphonse75@gmail.com","telephone":"+22675987367","address":{"@type":"PostalAddress","addressLocality":"Ouagadougou","addressCountry":"BF"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Université Joseph Ki-Zerbo / ISSP"},"knowsAbout":["Data Science","Machine Learning","Statistiques","R","Python","Power BI","Économétrie","QGIS"],"sameAs":["https://github.com/kaborealpha","https://sicss.io/2025/issp/people"]}
+  </script>
+
+  <style>
+    /* ═══════════════════════════════
+       TOKENS
+    ═══════════════════════════════ */
+    :root {
+      --blue:      #0047AB;   /* Royal Blue — couleur principale */
+      --blue-dark: #003080;   /* Bleu profond pour accents forts */
+      --blue-mid:  #1a5fc8;   /* Bleu intermédiaire */
+      --blue-pale: #e8f0fb;   /* Fond léger */
+      --blue-line: #c5d8f5;   /* Bordures */
+      --white:     #ffffff;
+      --paper:     #f9fbff;   /* Blanc cassé papier */
+      --ink:       #0a1628;   /* Texte principal */
+      --ink-2:     #1e3a5f;   /* Texte secondaire */
+      --muted:     #526175;   /* Texte tertiaire */
+      --rule:      #dde8f8;   /* Séparateurs */
+
+      --serif: 'EB Garamond', Georgia, serif;
+      --sans:  'IBM Plex Sans', 'Helvetica Neue', sans-serif;
+      --ease:  cubic-bezier(.22,1,.36,1);
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; font-size:16px; }
+    body { font-family:var(--sans); background:var(--white); color:var(--ink); overflow-x:hidden; }
+
+    /* ═══════════════════════════════
+       UTILITY
+    ═══════════════════════════════ */
+    .tag {
+      display:inline-block;
+      font-size:.68rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+      padding:.28rem .8rem; border-radius:2px;
+    }
+    .tag-blue  { background:var(--blue); color:#fff; }
+    .tag-pale  { background:var(--blue-pale); color:var(--blue-dark); }
+    .tag-ghost { background:transparent; color:var(--blue); border:1px solid var(--blue-line); }
+
+    /* ═══════════════════════════════
+       NAV
+    ═══════════════════════════════ */
+    nav {
+      position:fixed; top:0; left:0; right:0; z-index:200;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--rule);
+    }
+    .nav-inner {
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:.9rem 2rem;
+    }
+    .nav-brand {
+      display:flex; align-items:baseline; gap:.5rem;
+      text-decoration:none;
+    }
+    .nav-brand-name {
+      font-family:var(--serif); font-size:1.15rem; font-weight:700;
+      color:var(--ink); letter-spacing:-.01em;
+    }
+    .nav-brand-title {
+      font-size:.72rem; font-weight:600; color:var(--muted);
+      letter-spacing:.08em; text-transform:uppercase;
+    }
+    .nav-links { display:flex; gap:2rem; list-style:none; }
+    .nav-links a {
+      font-size:.78rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
+      text-decoration:none; color:var(--muted);
+      transition:color .2s;
+    }
+    .nav-links a:hover { color:var(--blue); }
+    .nav-contact {
+      font-size:.78rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+      text-decoration:none; color:var(--blue);
+      padding:.55rem 1.4rem; border:1.5px solid var(--blue); border-radius:2px;
+      transition:all .2s;
+    }
+    .nav-contact:hover { background:var(--blue); color:#fff; }
+
+    /* ═══════════════════════════════
+       LAYOUT WRAPPER
+    ═══════════════════════════════ */
+    .wrap { max-width:1200px; margin:0 auto; padding:0 2rem; }
+
+    /* ═══════════════════════════════
+       HERO — Masthead style
+    ═══════════════════════════════ */
+    .hero {
+      padding-top:6rem;
+      background:var(--white);
+      border-bottom:2px solid var(--blue);
+    }
+    .hero-inner {
+      max-width:1200px; margin:0 auto; padding:4rem 2rem 0;
+      display:grid; grid-template-columns:1fr auto;
+      gap:4rem; align-items:end;
+    }
+    .hero-left {}
+
+    /* Breadcrumb-style label */
+    .hero-breadcrumb {
+      display:flex; align-items:center; gap:.5rem;
+      font-size:.72rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase;
+      color:var(--muted); margin-bottom:1.5rem;
+    }
+    .hero-breadcrumb span { color:var(--blue); }
+    .hero-breadcrumb .sep { color:var(--rule); }
+
+    .hero-name {
+      font-family:var(--serif);
+      font-size:clamp(3rem, 6vw, 5.5rem);
+      font-weight:700; line-height:1; letter-spacing:-.02em;
+      color:var(--ink); margin-bottom:1rem;
+    }
+    .hero-name em { font-style:italic; font-weight:400; color:var(--blue); }
+
+    .hero-title-bar {
+      display:flex; align-items:center; gap:1.2rem;
+      padding:1rem 0; border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
+      margin-bottom:1.5rem; flex-wrap:wrap;
+    }
+    .hero-title-main {
+      font-size:1rem; font-weight:700; color:var(--ink-2);
+      letter-spacing:.02em;
+    }
+    .hero-title-sep { width:4px; height:4px; border-radius:50%; background:var(--blue); flex-shrink:0; }
+    .hero-title-sub { font-size:.9rem; color:var(--muted); font-weight:400; }
+
+    .hero-desc {
+      font-size:.97rem; color:var(--muted); line-height:1.8;
+      max-width:600px; margin-bottom:2rem;
+    }
+    .hero-desc strong { color:var(--ink-2); font-weight:600; }
+
+    .hero-actions {
+      display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:3rem;
+    }
+    .btn-primary {
+      font-size:.82rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+      text-decoration:none; color:#fff;
+      background:var(--blue); padding:.75rem 2rem; border-radius:2px;
+      transition:all .2s; box-shadow:0 2px 12px rgba(0,71,171,.25);
+    }
+    .btn-primary:hover { background:var(--blue-dark); box-shadow:0 4px 20px rgba(0,71,171,.4); transform:translateY(-1px); }
+    .btn-secondary {
+      font-size:.82rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+      text-decoration:none; color:var(--blue);
+      border:1.5px solid var(--blue); padding:.75rem 2rem; border-radius:2px;
+      transition:all .2s;
+    }
+    .btn-secondary:hover { background:var(--blue-pale); transform:translateY(-1px); }
+
+    /* Social row */
+    .hero-social {
+      display:flex; align-items:center; gap:1rem; flex-wrap:wrap;
+      padding:1rem 0; border-top:1px solid var(--rule);
+    }
+    .hero-social-label {
+      font-size:.68rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--muted);
+    }
+    .social-link {
+      display:inline-flex; align-items:center; gap:.4rem;
+      font-size:.78rem; font-weight:600; color:var(--blue);
+      text-decoration:none; letter-spacing:.03em;
+      transition:color .2s;
+    }
+    .social-link:hover { color:var(--blue-dark); text-decoration:underline; }
+    .social-link svg { width:14px; height:14px; }
+    .social-dot { width:3px; height:3px; border-radius:50%; background:var(--rule); }
+
+    /* Hero right — ID card */
+    .hero-right { padding-bottom:0; }
+    .id-card {
+      width:260px;
+      background:var(--blue);
+      border-radius:0;
+      padding:2rem;
+      display:flex; flex-direction:column; gap:1.2rem;
+      position:relative;
+      clip-path:polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+    }
+    .id-avatar {
+      width:90px; height:90px; border-radius:50%;
+      background:rgba(255,255,255,.15);
+      border:3px solid rgba(255,255,255,.4);
+      display:flex; align-items:center; justify-content:center;
+      margin:0 auto;
+    }
+    .id-initials {
+      font-family:var(--serif); font-size:2.2rem; font-weight:700;
+      color:#fff; line-height:1;
+    }
+    /* Photo placeholder comment — replace initials with img tag */
+    .id-name {
+      font-family:var(--serif); font-size:1.1rem; font-weight:700;
+      color:#fff; text-align:center; line-height:1.2;
+    }
+    .id-role {
+      font-size:.72rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+      color:rgba(255,255,255,.7); text-align:center;
+    }
+    .id-divider { height:1px; background:rgba(255,255,255,.2); }
+    .id-info { display:flex; flex-direction:column; gap:.6rem; }
+    .id-row { display:flex; justify-content:space-between; align-items:center; }
+    .id-key { font-size:.7rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.6); }
+    .id-val { font-size:.78rem; font-weight:600; color:#fff; }
+    .id-status {
+      display:flex; align-items:center; gap:.5rem;
+      background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2);
+      padding:.5rem .8rem; border-radius:2px;
+    }
+    .id-dot { width:7px; height:7px; border-radius:50%; background:#4ade80; animation:pulse 2s infinite; flex-shrink:0; }
+    @keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(74,222,128,.5);} 50%{box-shadow:0 0 0 5px rgba(74,222,128,0);} }
+    .id-status-text { font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#fff; }
+
+    /* Stats strip below hero */
+    .stats-strip {
+      background:var(--blue-dark); color:#fff;
+    }
+    .stats-inner {
+      max-width:1200px; margin:0 auto; padding:0 2rem;
+      display:grid; grid-template-columns:repeat(4,1fr);
+    }
+    .stat-item {
+      padding:1.5rem 2rem;
+      border-right:1px solid rgba(255,255,255,.15);
+      display:flex; align-items:center; gap:1rem;
+    }
+    .stat-item:last-child { border-right:none; }
+    .stat-num {
+      font-family:var(--serif); font-size:2.2rem; font-weight:700;
+      color:#fff; line-height:1; flex-shrink:0;
+    }
+    .stat-label { font-size:.72rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.65); line-height:1.4; }
+
+    /* ═══════════════════════════════
+       SECTION SCAFFOLD
+    ═══════════════════════════════ */
+    .section { padding:5rem 0; }
+    .section-alt { background:var(--paper); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); }
+
+    .section-header { margin-bottom:3rem; }
+    .section-kicker {
+      display:flex; align-items:center; gap:.8rem; margin-bottom:.6rem;
+    }
+    .kicker-rule { width:32px; height:2px; background:var(--blue); flex-shrink:0; }
+    .kicker-text {
+      font-size:.7rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--blue);
+    }
+    .section-title {
+      font-family:var(--serif);
+      font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:700;
+      color:var(--ink); line-height:1.1; letter-spacing:-.01em;
+    }
+    .section-title em { font-style:italic; font-weight:400; color:var(--blue); }
+    .section-lead {
+      font-size:.95rem; color:var(--muted); line-height:1.8; max-width:600px; margin-top:.6rem;
+    }
+
+    /* Reveal */
+    .rv { opacity:1; transition:opacity .6s var(--ease), transform .6s var(--ease); }
+    .rv.hidden { opacity:0; transform:translateY(28px); }
+
+    /* ═══════════════════════════════
+       ABOUT
+    ═══════════════════════════════ */
+    .about-grid { display:grid; grid-template-columns:1.1fr 1fr; gap:5rem; align-items:start; }
+
+    .pullquote {
+      font-family:var(--serif); font-style:italic;
+      font-size:clamp(1.15rem,2vw,1.45rem); color:var(--ink-2); line-height:1.55;
+      border-left:3px solid var(--blue); padding-left:1.4rem;
+      margin:2rem 0;
+    }
+    .about-body p { font-size:.95rem; color:var(--muted); line-height:1.85; margin-bottom:1rem; }
+
+    .feature-list { display:flex; flex-direction:column; gap:1px; border:1px solid var(--rule); }
+    .feature-item {
+      display:grid; grid-template-columns:auto 1fr;
+      gap:1.2rem; align-items:start;
+      padding:1.4rem 1.5rem;
+      background:var(--white);
+      border-bottom:1px solid var(--rule);
+      transition:background .2s;
+    }
+    .feature-item:last-child { border-bottom:none; }
+    .feature-item:hover { background:var(--blue-pale); }
+    .fi-icon {
+      width:36px; height:36px; flex-shrink:0;
+      border:1.5px solid var(--blue-line);
+      display:flex; align-items:center; justify-content:center;
+      background:var(--white);
+    }
+    .fi-icon svg { width:16px; height:16px; stroke:var(--blue); fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+    .fi-title { font-size:.88rem; font-weight:700; color:var(--ink); margin-bottom:.2rem; }
+    .fi-desc { font-size:.82rem; color:var(--muted); line-height:1.55; }
+
+    /* ═══════════════════════════════
+       SKILLS — Academic table
+    ═══════════════════════════════ */
+    .skills-layout { display:grid; grid-template-columns:1.4fr 1fr; gap:4rem; align-items:start; }
+
+    .table-academic {
+      width:100%; border-collapse:collapse;
+      font-size:.88rem; border:1px solid var(--rule);
+    }
+    .table-academic caption {
+      font-size:.7rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+      color:var(--muted); text-align:left; padding:.6rem 0; margin-bottom:.5rem;
+    }
+    .table-academic thead { background:var(--blue); }
+    .table-academic thead th {
+      padding:.85rem 1.2rem; text-align:left;
+      font-size:.7rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+      color:#fff; border-right:1px solid rgba(255,255,255,.15);
+    }
+    .table-academic thead th:last-child { border-right:none; }
+    .table-academic tbody tr { border-bottom:1px solid var(--rule); transition:background .15s; }
+    .table-academic tbody tr:nth-child(even) { background:var(--paper); }
+    .table-academic tbody tr:hover { background:var(--blue-pale); }
+    .table-academic td {
+      padding:.9rem 1.2rem; color:var(--ink-2); vertical-align:middle;
+      border-right:1px solid var(--rule);
+    }
+    .table-academic td:last-child { border-right:none; }
+    .table-academic td:first-child { font-weight:700; color:var(--ink); }
+
+    .level-cell { display:flex; align-items:center; gap:.8rem; }
+    .level-bar { flex:1; height:3px; background:var(--blue-line); }
+    .level-fill { height:100%; background:var(--blue); transition:width 1s var(--ease); }
+    .level-text { font-size:.7rem; font-weight:700; color:var(--blue); letter-spacing:.06em; text-transform:uppercase; white-space:nowrap; }
+
+    .tag-row { display:flex; flex-wrap:wrap; gap:.35rem; }
+
+    /* Skills sidebar */
+    .skills-sidebar { display:flex; flex-direction:column; gap:1.5rem; }
+    .skill-block {
+      border:1px solid var(--rule); background:var(--white);
+    }
+    .skill-block-head {
+      background:var(--blue-pale); border-bottom:1px solid var(--rule);
+      padding:.7rem 1.1rem;
+      font-size:.7rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--blue-dark);
+    }
+    .skill-block-body { padding:1rem 1.1rem; display:flex; flex-wrap:wrap; gap:.4rem; }
+
+    /* ═══════════════════════════════
+       EXPERIENCE — Document layout
+    ═══════════════════════════════ */
+    .exp-list-wrap { display:flex; flex-direction:column; gap:0; border:1px solid var(--rule); }
+    .exp-entry {
+      display:grid; grid-template-columns:200px 1fr;
+      border-bottom:1px solid var(--rule); transition:background .2s;
+    }
+    .exp-entry:last-child { border-bottom:none; }
+    .exp-entry:hover { background:var(--blue-pale); }
+    .exp-meta-col {
+      padding:1.8rem 1.5rem; border-right:1px solid var(--rule);
+      background:var(--paper); display:flex; flex-direction:column; gap:.6rem;
+    }
+    .exp-date-badge {
+      font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+      color:var(--blue); background:var(--blue-pale);
+      padding:.3rem .7rem; display:inline-block; border:1px solid var(--blue-line); border-radius:2px;
+    }
+    .exp-org { font-size:.78rem; font-weight:600; color:var(--muted); line-height:1.4; }
+    .exp-body-col { padding:1.8rem 2rem; }
+    .exp-title { font-family:var(--serif); font-size:1.1rem; font-weight:700; color:var(--ink); margin-bottom:.3rem; line-height:1.2; }
+    .exp-focus { font-size:.8rem; font-weight:600; color:var(--blue); margin-bottom:1rem; letter-spacing:.03em; }
+    .exp-tasks { list-style:none; display:flex; flex-direction:column; gap:.3rem; }
+    .exp-tasks li {
+      display:flex; gap:.7rem; font-size:.85rem; color:var(--muted); line-height:1.65;
+    }
+    .exp-tasks li::before { content:'—'; color:var(--blue); flex-shrink:0; font-weight:700; }
+
+    /* ═══════════════════════════════
+       EDUCATION — Academic registry
+    ═══════════════════════════════ */
+    .edu-registry { border:1px solid var(--rule); }
+    .edu-registry-head {
+      background:var(--blue); color:#fff;
+      display:grid; grid-template-columns:160px 1fr 180px;
+      font-size:.7rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+    }
+    .edu-registry-head div { padding:.85rem 1.2rem; border-right:1px solid rgba(255,255,255,.15); }
+    .edu-registry-head div:last-child { border-right:none; }
+    .edu-row {
+      display:grid; grid-template-columns:160px 1fr 180px;
+      border-bottom:1px solid var(--rule); transition:background .2s;
+    }
+    .edu-row:last-child { border-bottom:none; }
+    .edu-row:nth-child(even) { background:var(--paper); }
+    .edu-row:hover { background:var(--blue-pale); }
+    .edu-cell { padding:1.2rem; border-right:1px solid var(--rule); vertical-align:top; }
+    .edu-cell:last-child { border-right:none; }
+    .edu-period-text { font-size:.78rem; font-weight:700; color:var(--blue); line-height:1.4; }
+    .edu-degree-title { font-family:var(--serif); font-size:.98rem; font-weight:700; color:var(--ink); margin-bottom:.2rem; line-height:1.3; }
+    .edu-degree-spec { font-size:.8rem; color:var(--muted); line-height:1.5; }
+    .edu-institution { font-size:.8rem; font-weight:600; color:var(--ink-2); line-height:1.5; }
+
+    /* ═══════════════════════════════
+       CERTIFICATIONS — Cards
+    ═══════════════════════════════ */
+    .certs-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:1px; border:1px solid var(--rule); background:var(--rule); }
+    .cert-card {
+      background:var(--white); padding:1.8rem;
+      display:flex; flex-direction:column; gap:.9rem;
+      transition:background .2s;
+    }
+    .cert-card:hover { background:var(--blue-pale); }
+    .cert-issuer-row { display:flex; align-items:center; gap:.8rem; }
+    .cert-monogram {
+      width:40px; height:40px; flex-shrink:0;
+      background:var(--blue); color:#fff;
+      font-size:.65rem; font-weight:900; letter-spacing:.04em;
+      display:flex; align-items:center; justify-content:center;
+    }
+    .cert-org-name { font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+    .cert-title { font-family:var(--serif); font-size:1rem; font-weight:700; color:var(--ink); line-height:1.3; }
+    .cert-date { font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--blue); }
+    .cert-link {
+      display:inline-flex; align-items:center; gap:.4rem;
+      font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+      color:var(--blue); text-decoration:none;
+      border-bottom:1px solid var(--blue-line); padding-bottom:1px;
+      transition:color .2s, border-color .2s; align-self:flex-start;
+    }
+    .cert-link:hover { color:var(--blue-dark); border-color:var(--blue-dark); }
+    .cert-badge-tag {
+      font-size:.68rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+      color:var(--white); background:var(--blue); padding:.25rem .7rem;
+      display:inline-block; align-self:flex-start;
+    }
+
+    /* ═══════════════════════════════
+       LANGUAGES — Simple table
+    ═══════════════════════════════ */
+    .lang-table {
+      width:100%; border-collapse:collapse; border:1px solid var(--rule); font-size:.88rem;
+    }
+    .lang-table thead { background:var(--blue); }
+    .lang-table thead th {
+      padding:.8rem 1.4rem; text-align:left;
+      font-size:.7rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+      color:#fff; border-right:1px solid rgba(255,255,255,.15);
+    }
+    .lang-table thead th:last-child { border-right:none; }
+    .lang-table tbody tr { border-bottom:1px solid var(--rule); transition:background .15s; }
+    .lang-table tbody tr:nth-child(even) { background:var(--paper); }
+    .lang-table tbody tr:hover { background:var(--blue-pale); }
+    .lang-table td { padding:1rem 1.4rem; color:var(--ink-2); border-right:1px solid var(--rule); }
+    .lang-table td:last-child { border-right:none; }
+    .lang-table td:first-child { font-family:var(--serif); font-size:1rem; font-weight:700; color:var(--ink); }
+    .level-dot-row { display:flex; gap:.35rem; }
+    .ldot { width:10px; height:10px; border-radius:50%; background:var(--blue-line); }
+    .ldot.on { background:var(--blue); }
+
+    /* ═══════════════════════════════
+       CONTACT — Institutional
+    ═══════════════════════════════ */
+    .contact-section { background:var(--blue); }
+    .contact-inner {
+      max-width:1200px; margin:0 auto; padding:5rem 2rem;
+      display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center;
+    }
+    .contact-left {}
+    .contact-kicker {
+      font-size:.7rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
+      color:rgba(255,255,255,.6); margin-bottom:.8rem;
+    }
+    .contact-title {
+      font-family:var(--serif);
+      font-size:clamp(2rem,4vw,3rem); font-weight:700; color:#fff; line-height:1.1; margin-bottom:1rem;
+    }
+    .contact-title em { font-style:italic; font-weight:400; }
+    .contact-desc { font-size:.93rem; color:rgba(255,255,255,.75); line-height:1.8; }
+
+    .contact-cards { display:flex; flex-direction:column; gap:.8rem; }
+    .contact-card {
+      display:flex; align-items:center; gap:1.2rem;
+      background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.15);
+      padding:1.1rem 1.4rem; text-decoration:none; color:#fff;
+      transition:all .2s;
+    }
+    .contact-card:hover { background:rgba(255,255,255,.16); transform:translateX(6px); }
+    .cc-icon {
+      width:38px; height:38px; flex-shrink:0;
+      background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.25);
+      display:flex; align-items:center; justify-content:center;
+    }
+    .cc-icon svg { width:16px; height:16px; stroke:#fff; fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+    .cc-icon.fill svg { fill:#fff; stroke:none; }
+    .cc-label { font-size:.65rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.6); margin-bottom:.1rem; }
+    .cc-val { font-size:.88rem; font-weight:600; color:#fff; }
+
+    /* ═══════════════════════════════
+       FOOTER
+    ═══════════════════════════════ */
+    footer {
+      background:#001a4d; border-top:3px solid var(--blue);
+      padding:1.8rem 0;
+    }
+    .footer-inner {
+      max-width:1200px; margin:0 auto; padding:0 2rem;
+      display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;
+    }
+    .footer-left { font-family:var(--serif); font-size:1rem; color:rgba(255,255,255,.5); font-style:italic; }
+    .footer-center { font-size:.72rem; color:rgba(255,255,255,.35); letter-spacing:.08em; text-transform:uppercase; }
+    .footer-right { font-size:.72rem; color:rgba(255,255,255,.35); letter-spacing:.06em; }
+
+    /* ═══════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════ */
+    @media(max-width:960px) {
+      .hero-inner { grid-template-columns:1fr; }
+      .hero-right { display:none; }
+      .about-grid { grid-template-columns:1fr; gap:3rem; }
+      .skills-layout { grid-template-columns:1fr; }
+      .exp-entry { grid-template-columns:1fr; }
+      .exp-meta-col { border-right:none; border-bottom:1px solid var(--rule); }
+      .edu-registry-head, .edu-row { grid-template-columns:1fr; }
+      .stats-inner { grid-template-columns:repeat(2,1fr); }
+      .contact-inner { grid-template-columns:1fr; gap:3rem; }
+      .nav-links { display:none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">
+      <span class="nav-brand-name">Alphonse KABORE</span>
+      <span style="color:var(--rule);margin:0 .3rem;">·</span>
+      <span class="nav-brand-title">Data Scientist</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">Profil</a></li>
+      <li><a href="#competences">Compétences</a></li>
+      <li><a href="#experience">Expériences</a></li>
+      <li><a href="#formation">Formation</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:kaborealphonse75@gmail.com" class="nav-contact">Me contacter</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-left rv hidden">
+      <div class="hero-breadcrumb">
+        Ouagadougou, Burkina Faso
+        <span class="sep">·</span>
+        <span>ISSP — Université Joseph Ki-Zerbo</span>
+        <span class="sep">·</span>
+        <span>Promotion 2024</span>
+      </div>
+
+      <h1 class="hero-name">
+        Alphonse <em>KABORE</em>
+      </h1>
+
+      <div class="hero-title-bar">
+        <span class="hero-title-main">Ingénieur Statisticien Économiste</span>
+        <span class="hero-title-sep"></span>
+        <span class="hero-title-sub">Data Scientist · Analyste Statisticien</span>
+      </div>
+
+      <p class="hero-desc">
+        Spécialiste en <strong>analyse de données</strong>, modélisation statistique et visualisation interactive.
+        Passionné par l'usage de l'<strong>intelligence artificielle</strong> et des données massives
+        pour soutenir la prise de décision en Afrique subsaharienne.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#experience" class="btn-primary">Voir mon parcours</a>
+        <a href="#contact" class="btn-secondary">Me contacter</a>
+        <a href="https://github.com/kaborealpha" target="_blank" class="btn-secondary">GitHub</a>
+      </div>
+
+      <div class="hero-social">
+        <span class="hero-social-label">Liens</span>
+        <a href="mailto:kaborealphonse75@gmail.com" class="social-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          kaborealphonse75@gmail.com
+        </a>
+        <span class="social-dot"></span>
+        <a href="https://github.com/kaborealpha" target="_blank" class="social-link">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          github.com/kaborealpha
+        </a>
+        <span class="social-dot"></span>
+        <a href="https://wa.me/22675987367" target="_blank" class="social-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          WhatsApp
+        </a>
+        <span class="social-dot"></span>
+        <a href="https://sicss.io/2025/issp/people" target="_blank" class="social-link">SCISS-ISSP 2025</a>
+      </div>
+    </div>
+
+    <div class="hero-right rv hidden">
+      <!-- ID CARD -->
+      <div class="id-card">
+        <div class="id-avatar">
+          <!--
+            PHOTO : Remplacez le contenu ci-dessous par :
+            <img src="votre-photo.jpg" alt="Alphonse KABORE"
+                 style="width:84px;height:84px;border-radius:50%;object-fit:cover;">
+          -->
+          <span class="id-initials">AK</span>
+        </div>
+        <div class="id-name">Alphonse KABORE</div>
+        <div class="id-role">Statisticien · Data Scientist</div>
+        <div class="id-divider"></div>
+        <div class="id-info">
+          <div class="id-row"><span class="id-key">Institution</span><span class="id-val">ISSP / UJK</span></div>
+          <div class="id-row"><span class="id-key">Pays</span><span class="id-val">Burkina Faso</span></div>
+          <div class="id-row"><span class="id-key">Niveau</span><span class="id-val">Bac + 5 (en cours)</span></div>
+          <div class="id-row"><span class="id-key">Spécialité</span><span class="id-val">Ing. Stat. Éco.</span></div>
+        </div>
+        <div class="id-divider"></div>
+        <div class="id-status">
+          <div class="id-dot"></div>
+          <span class="id-status-text">Ouvert aux opportunités</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item rv hidden">
+      <div class="stat-num">4+</div>
+      <div class="stat-label">Années<br>d'expérience</div>
+    </div>
+    <div class="stat-item rv hidden">
+      <div class="stat-num">10+</div>
+      <div class="stat-label">Outils &<br>logiciels</div>
+    </div>
+    <div class="stat-item rv hidden">
+      <div class="stat-num">5</div>
+      <div class="stat-label">Certifications<br>obtenues</div>
+    </div>
+    <div class="stat-item rv hidden">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Langues<br>maîtrisées</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-header rv hidden">
+      <div class="section-kicker"><div class="kicker-rule"></div><span class="kicker-text">Profil</span></div>
+      <h2 class="section-title">Présentation <em>professionnelle</em></h2>
+      <p class="section-lead">Données, méthodes et impact au service du développement.</p>
+    </div>
+    <div class="about-grid">
+      <div class="rv hidden">
+        <blockquote class="pullquote">
+          « Transformer les données brutes en insights actionnables pour soutenir la prise de décision en Afrique subsaharienne. »
+        </blockquote>
+        <div class="about-body">
+          <p>Étudiant en Ingénierie Statistique et Économique à l'Institut Supérieur des Sciences de la Population (ISSP), Université Joseph Ki-Zerbo de Ouagadougou, je développe une expertise à l'intersection de la statistique, de l'économie et de l'informatique décisionnelle.</p>
+          <p>Titulaire d'une licence professionnelle en Analyse Statistique — spécialité Informatique Décisionnelle — j'ai participé à des projets concrets : numérisation des systèmes statistiques scolaires, analyse des inégalités de genre, et formation de professionnels aux méthodes quantitatives.</p>
+          <p>Mon objectif : mettre les outils modernes de la science des données au service des institutions africaines et des organisations internationales.</p>
+        </div>
+      </div>
+      <div class="rv hidden">
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="fi-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div><div class="fi-title">Modélisation statistique & Économétrie</div><div class="fi-desc">Statistiques descriptives, modèles logit/probit, séries temporelles, analyse multidimensionnelle (ACP, ACM, AFC).</div></div>
+          </div>
+          <div class="feature-item">
+            <div class="fi-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+            <div><div class="fi-title">Architecture & Gestion de données</div><div class="fi-desc">Bases relationnelles (MySQL) et NoSQL (MongoDB, Redis, Cassandra, Neo4j). Conception de systèmes de collecte.</div></div>
+          </div>
+          <div class="feature-item">
+            <div class="fi-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+            <div><div class="fi-title">Tableaux de bord & Visualisation</div><div class="fi-desc">Conception et déploiement de dashboards interactifs avec Power BI, RShiny et Streamlit pour la diffusion institutionnelle.</div></div>
+          </div>
+          <div class="feature-item">
+            <div class="fi-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div><div class="fi-title">Formation & Transfert de compétences</div><div class="fi-desc">Formateur en R, Python, Excel, Django et méthodes de machine learning pour professionnels et académiques.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COMPETENCES ═══ -->
+<section class="section section-alt" id="competences">
+  <div class="wrap">
+    <div class="section-header rv hidden">
+      <div class="section-kicker"><div class="kicker-rule"></div><span class="kicker-text">Compétences</span></div>
+      <h2 class="section-title">Arsenal <em>technique</em></h2>
+      <p class="section-lead">Maîtrise de l'ensemble de la chaîne de valeur de la donnée.</p>
+    </div>
+    <div class="skills-layout">
+      <div class="rv hidden">
+        <table class="table-academic">
+          <thead>
+            <tr>
+              <th>Domaine</th>
+              <th>Outils</th>
+              <th>Niveau</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Analyse de données</td>
+              <td><div class="tag-row"><span class="tag tag-blue">R</span><span class="tag tag-blue">STATA</span><span class="tag tag-pale">SPSS</span><span class="tag tag-ghost">QGIS</span></div></td>
+              <td><div class="level-cell"><div class="level-bar"><div class="level-fill" style="width:95%"></div></div><span class="level-text">Expert</span></div></td>
+            </tr>
+            <tr>
+              <td>Bureautique & Reporting</td>
+              <td><div class="tag-row"><span class="tag tag-blue">Excel</span><span class="tag tag-blue">LaTeX</span><span class="tag tag-pale">VBA</span><span class="tag tag-ghost">Access</span></div></td>
+              <td><div class="level-cell"><div class="level-bar"><div class="level-fill" style="width:95%"></div></div><span class="level-text">Expert</span></div></td>
+            </tr>
+            <tr>
+              <td>BI & Dashboards</td>
+              <td><div class="tag-row"><span class="tag tag-blue">Power BI</span><span class="tag tag-blue">RShiny</span><span class="tag tag-pale">Streamlit</span></div></td>
+              <td><div class="level-cell"><div class="level-bar"><div class="level-fill" style="width:82%"></div></div><span class="level-text">Avancé</span></div></td>
+            </tr>
+            <tr>
+              <td>Web Scraping</td>
+              <td><div class="tag-row"><span class="tag tag-blue">Selenium</span><span class="tag tag-pale">BeautifulSoup</span><span class="tag tag-ghost">rvest</span></div></td>
+              <td><div class="level-cell"><div class="level-bar"><div class="level-fill" style="width:82%"></div></div><span class="level-text">Avancé</span></div></td>
+            </tr>
+            <tr>
+              <td>Développement web</td>
+              <td><div class="tag-row"><span class="tag tag-blue">Django</span><span class="tag tag-pale">HTML/CSS</span></div></td>
+              <td><div class="level-cell"><div class="level-bar"><div class="level-fill" style="width:82%"></div></div><span class="level-text">Avancé</span></div></td>
+            </tr>
+            <tr>
+              <td>Collecte de données</td>
+              <td><div class="tag-row"><span class="tag tag-blue">ODK</span><span class="tag tag-pale">CSPro</span></div></td>
+              <td><div class="level-cell"><div class="level-bar"><div class="level-fill" style="width:82%"></div></div><span class="level-text">Avancé</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="skills-sidebar rv hidden">
+        <div class="skill-block">
+          <div class="skill-block-head">Machine Learning</div>
+          <div class="skill-block-body">
+            <span class="tag tag-blue">Régression</span>
+            <span class="tag tag-blue">Classification</span>
+            <span class="tag tag-pale">Clustering</span>
+            <span class="tag tag-pale">NLP / Text Mining</span>
+            <span class="tag tag-ghost">Analyse de réseau</span>
+          </div>
+        </div>
+        <div class="skill-block">
+          <div class="skill-block-head">Économétrie</div>
+          <div class="skill-block-body">
+            <span class="tag tag-blue">Séries temporelles</span>
+            <span class="tag tag-blue">Logit / Probit</span>
+            <span class="tag tag-pale">Modèle multiniveau</span>
+            <span class="tag tag-pale">Processus de Poisson</span>
+            <span class="tag tag-ghost">MCG</span>
+            <span class="tag tag-ghost">Tobit</span>
+          </div>
+        </div>
+        <div class="skill-block">
+          <div class="skill-block-head">Bases de données</div>
+          <div class="skill-block-body">
+            <span class="tag tag-blue">MySQL</span>
+            <span class="tag tag-blue">MongoDB</span>
+            <span class="tag tag-pale">Redis</span>
+            <span class="tag tag-pale">Apache Cassandra</span>
+            <span class="tag tag-ghost">Neo4j</span>
+          </div>
+        </div>
+        <div class="skill-block">
+          <div class="skill-block-head">Inférence & Exploration</div>
+          <div class="skill-block-body">
+            <span class="tag tag-blue">ACP / ACM / AFC</span>
+            <span class="tag tag-pale">Tests paramétriques</span>
+            <span class="tag tag-pale">Tests non paramétriques</span>
+            <span class="tag tag-ghost">Théorie de l'estimation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EXPERIENCE ═══ -->
+<section class="section" id="experience">
+  <div class="wrap">
+    <div class="section-header rv hidden">
+      <div class="section-kicker"><div class="kicker-rule"></div><span class="kicker-text">Parcours professionnel</span></div>
+      <h2 class="section-title">Expériences <em>professionnelles</em></h2>
+      <p class="section-lead">Des missions alliant recherche, terrain, formation et innovation technologique.</p>
+    </div>
+    <div class="exp-list-wrap rv hidden">
+      <div class="exp-entry">
+        <div class="exp-meta-col">
+          <span class="exp-date-badge">Sept. – Oct. 2025</span>
+          <div class="exp-org">Formation professionnelle</div>
+        </div>
+        <div class="exp-body-col">
+          <div class="exp-title">Formateur en Excel, Python & Développement web</div>
+          <div class="exp-focus">Django · Python · Excel · Analyse de données</div>
+          <ul class="exp-tasks">
+            <li>Formation en Excel pour l'analyse de données et l'automatisation des tâches</li>
+            <li>Initiation à Python et à l'analyse de données pour des apprenants débutants</li>
+            <li>Développement de sites web avec Django et encadrement technique des apprenants</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-entry">
+        <div class="exp-meta-col">
+          <span class="exp-date-badge">Juil. – Sept. 2025</span>
+          <div class="exp-org">ISSP — Recherche académique</div>
+        </div>
+        <div class="exp-body-col">
+          <div class="exp-title">Assistant en rédaction d'article scientifique</div>
+          <div class="exp-focus">Thème : Disparité de genre dans les taux de promotion au Burkina Faso</div>
+          <ul class="exp-tasks">
+            <li>Revue de littérature sur les inégalités de genre en milieu scolaire en Afrique subsaharienne</li>
+            <li>Contribution à la méthodologie d'analyse statistique des données</li>
+            <li>Présentation des résultats et de la discussion scientifique</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-entry">
+        <div class="exp-meta-col">
+          <span class="exp-date-badge">Juil. – Août 2025</span>
+          <div class="exp-org">ISSP — École d'été SCISS-ISSP</div>
+        </div>
+        <div class="exp-body-col">
+          <div class="exp-title">Assistant Formateur — École d'été SCISS-ISSP</div>
+          <div class="exp-focus">R · Machine Learning · Web Scraping · Analyse de réseau</div>
+          <ul class="exp-tasks">
+            <li>Assistance à la maîtrise du logiciel R, Web Scraping, Analyse de texte et de réseau</li>
+            <li>Initiation aux modèles de machine learning pour les participants internationaux</li>
+            <li>Proposition de bonnes pratiques en analyse des données avec R</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-entry">
+        <div class="exp-meta-col">
+          <span class="exp-date-badge">Août – Déc. 2024</span>
+          <div class="exp-org">ISSP — Projet KIX-SEEDS<br><em>Stage de fin d'études</em></div>
+        </div>
+        <div class="exp-body-col">
+          <div class="exp-title">Assistant technique — Numérisation du système statistique scolaire</div>
+          <div class="exp-focus">Systèmes de collecte · Tableaux de bord · Métadonnées statistiques</div>
+          <ul class="exp-tasks">
+            <li>Conception de questionnaires d'enquête et élaboration de métadonnées statistiques</li>
+            <li>Analyse et conception de l'architecture des systèmes de collecte de données</li>
+            <li>Déploiement d'outils de collecte électronique — applications mobiles et plateformes numériques</li>
+            <li>Développement d'un tableau de bord interactif pour la diffusion des statistiques scolaires</li>
+            <li>Rédaction des comptes rendus et synthèses des ateliers du projet KIX-SEEDS</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-entry">
+        <div class="exp-meta-col">
+          <span class="exp-date-badge">Août – Sept. 2023</span>
+          <div class="exp-org">DGESS MARAH</div>
+        </div>
+        <div class="exp-body-col">
+          <div class="exp-title">Assistant technique — Traitement des données RGA2</div>
+          <div class="exp-focus">Apurement · Traitement des données · Rapport statistique</div>
+          <ul class="exp-tasks">
+            <li>Apurement et traitement des données du Recensement Général de l'Agriculture (RGA2)</li>
+            <li>Rédaction du rapport d'apurement des données</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FORMATION ═══ -->
+<section class="section section-alt" id="formation">
+  <div class="wrap">
+    <div class="section-header rv hidden">
+      <div class="section-kicker"><div class="kicker-rule"></div><span class="kicker-text">Formation académique</span></div>
+      <h2 class="section-title">Parcours <em>universitaire</em></h2>
+      <p class="section-lead">Université Joseph Ki-Zerbo de Ouagadougou.</p>
+    </div>
+    <div class="rv hidden">
+      <div class="edu-registry">
+        <div class="edu-registry-head">
+          <div>Période</div>
+          <div>Diplôme & Spécialisation</div>
+          <div>Établissement</div>
+        </div>
+        <div class="edu-row">
+          <div class="edu-cell"><div class="edu-period-text">Depuis Oct. 2024<br><span style="color:var(--blue);font-size:.7rem;font-weight:700;">En cours</span></div></div>
+          <div class="edu-cell"><div class="edu-degree-title">Ingénieur Statisticien Économiste</div><div class="edu-degree-spec">Formation universitaire de deuxième cycle</div></div>
+          <div class="edu-cell"><div class="edu-institution">ISSP — Institut Supérieur des Sciences de la Population<br>Université Joseph Ki-Zerbo</div></div>
+        </div>
+        <div class="edu-row">
+          <div class="edu-cell"><div class="edu-period-text">Oct. 2021 – Déc. 2024<br><span style="color:var(--blue);font-size:.7rem;font-weight:700;">Diplômé</span></div></div>
+          <div class="edu-cell"><div class="edu-degree-title">Licence Professionnelle — Analyse Statistique</div><div class="edu-degree-spec">Spécialisation : Informatique Décisionnelle<br>Thème : Défis de la numérisation dans le système statistique scolaire</div></div>
+          <div class="edu-cell"><div class="edu-institution">ISSP — Institut Supérieur des Sciences de la Population<br>Université Joseph Ki-Zerbo</div></div>
+        </div>
+        <div class="edu-row">
+          <div class="edu-cell"><div class="edu-period-text">Oct. 2020 – Oct. 2021</div></div>
+          <div class="edu-cell"><div class="edu-degree-title">MPSI — Mathématiques, Physique, Sciences de l'Ingénieur</div><div class="edu-degree-spec">Formation universitaire de premier cycle</div></div>
+          <div class="edu-cell"><div class="edu-institution">École Polytechnique de Ouagadougou<br>Université Joseph Ki-Zerbo</div></div>
+        </div>
+        <div class="edu-row">
+          <div class="edu-cell"><div class="edu-period-text">2017 – 2020</div></div>
+          <div class="edu-cell"><div class="edu-degree-title">Baccalauréat Série C</div><div class="edu-degree-spec">Sciences exactes et technologies</div></div>
+          <div class="edu-cell"><div class="edu-institution">Lycée Provincial Dimdolobsom<br>Boussé, Burkina Faso</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CERTIFICATIONS ═══ -->
+<section class="section" id="certifications">
+  <div class="wrap">
+    <div class="section-header rv hidden">
+      <div class="section-kicker"><div class="kicker-rule"></div><span class="kicker-text">Certifications & Distinctions</span></div>
+      <h2 class="section-title">Formation <em>complémentaire</em></h2>
+      <p class="section-lead">Un apprentissage continu pour rester à la pointe des meilleures pratiques mondiales.</p>
+    </div>
+    <div class="certs-grid rv hidden">
+      <div class="cert-card">
+        <div class="cert-issuer-row">
+          <div class="cert-monogram">GGL</div>
+          <div class="cert-org-name">Google · Coursera</div>
+        </div>
+        <div class="cert-title">Google Data Analytics Professional Certificate</div>
+        <div class="cert-date">2025 · Certificat professionnel</div>
+        <a href="https://www.coursera.org/programs/programme-d-apprentissage-burkina-faso-mdpuz" target="_blank" class="cert-link">Consulter le certificat →</a>
+      </div>
+      <div class="cert-card">
+        <div class="cert-issuer-row">
+          <div class="cert-monogram">UN</div>
+          <div class="cert-org-name">UNICEF · Formation en ligne</div>
+        </div>
+        <div class="cert-title">Conception d'un cadre de suivi-évaluation</div>
+        <div class="cert-date">Juillet 2025 · Attestation de réussite</div>
+        <span class="cert-badge-tag">Réussite</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-issuer-row">
+          <div class="cert-monogram">ISP</div>
+          <div class="cert-org-name">ISSP — Ouagadougou</div>
+        </div>
+        <div class="cert-title">Certificat d'Assistant Formateur SCISS-ISSP</div>
+        <div class="cert-date">Juin 2025</div>
+        <a href="https://sicss.io/2025/issp/people" target="_blank" class="cert-link">Voir le profil →</a>
+      </div>
+      <div class="cert-card">
+        <div class="cert-issuer-row">
+          <div class="cert-monogram">MKT</div>
+          <div class="cert-org-name">Université Numérique UCAD · Dakar</div>
+        </div>
+        <div class="cert-title">Certification Marketing Digital</div>
+        <div class="cert-date">Mars 2024</div>
+        <span class="cert-badge-tag">Certifié</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-issuer-row">
+          <div class="cert-monogram">OBK</div>
+          <div class="cert-org-name">Open Burkina — Ouagadougou</div>
+        </div>
+        <div class="cert-title">Data Scraping Challenge — Compétition nationale</div>
+        <div class="cert-date">Avril 2024</div>
+        <span class="cert-badge-tag">2ème place</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LANGUAGES ═══ -->
+<section class="section section-alt" id="langues">
+  <div class="wrap">
+    <div class="section-header rv hidden">
+      <div class="section-kicker"><div class="kicker-rule"></div><span class="kicker-text">Langues</span></div>
+      <h2 class="section-title">Maîtrise <em>linguistique</em></h2>
+    </div>
+    <div class="rv hidden">
+      <table class="lang-table">
+        <thead>
+          <tr>
+            <th>Langue</th>
+            <th>Expression orale</th>
+            <th>Lecture</th>
+            <th>Expression écrite</th>
+            <th>Niveau global</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Français</td>
+            <td>Très bien</td>
+            <td>Très bien</td>
+            <td>Très bien</td>
+            <td><div class="level-dot-row"><div class="ldot on"></div><div class="ldot on"></div><div class="ldot on"></div><div class="ldot on"></div><div class="ldot on"></div></div></td>
+          </tr>
+          <tr>
+            <td>Anglais</td>
+            <td>Assez bien</td>
+            <td>Bien</td>
+            <td>Bien</td>
+            <td><div class="level-dot-row"><div class="ldot on"></div><div class="ldot on"></div><div class="ldot on"></div><div class="ldot on"></div><div class="ldot"></div></div></td>
+          </tr>
+          <tr>
+            <td>Mooré</td>
+            <td>Très bien</td>
+            <td>Bien</td>
+            <td>—</td>
+            <td><div class="level-dot-row"><div class="ldot on"></div><div class="ldot on"></div><div class="ldot on"></div><div class="ldot on"></div><div class="ldot"></div></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<div class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="rv hidden">
+      <div class="contact-kicker">Collaboration · Opportunités · Recherche</div>
+      <h2 class="contact-title">Travaillons<br><em>ensemble</em></h2>
+      <p class="contact-desc">Ouvert aux opportunités professionnelles, collaborations académiques et projets de recherche en Afrique subsaharienne et à l'international. N'hésitez pas à me contacter.</p>
+    </div>
+    <div class="contact-cards rv hidden">
+      <a href="mailto:kaborealphonse75@gmail.com" class="contact-card">
+        <div class="cc-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div><div class="cc-label">E-mail professionnel</div><div class="cc-val">kaborealphonse75@gmail.com</div></div>
+      </a>
+      <a href="tel:+22675987367" class="contact-card">
+        <div class="cc-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.43 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div><div class="cc-label">Téléphone</div><div class="cc-val">(+226) 75 98 73 67</div></div>
+      </a>
+      <a href="https://wa.me/22675987367" target="_blank" class="contact-card">
+        <div class="cc-icon"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+        <div><div class="cc-label">WhatsApp</div><div class="cc-val">+226 75 98 73 67</div></div>
+      </a>
+      <a href="https://github.com/kaborealpha" target="_blank" class="contact-card">
+        <div class="cc-icon fill"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></div>
+        <div><div class="cc-label">GitHub</div><div class="cc-val">github.com/kaborealpha</div></div>
+      </a>
+      <a href="https://sicss.io/2025/issp/people" target="_blank" class="contact-card">
+        <div class="cc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <div><div class="cc-label">Profil académique SCISS-ISSP 2025</div><div class="cc-val">sicss.io/2025/issp/people</div></div>
+      </a>
+      <a href="https://www.coursera.org/programs/programme-d-apprentissage-burkina-faso-mdpuz" target="_blank" class="contact-card">
+        <div class="cc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <div><div class="cc-label">Google Data Analytics · Coursera</div><div class="cc-val">Voir le certificat →</div></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">Alphonse KABORE</div>
+    <div class="footer-center">Ouagadougou, Burkina Faso · © 2025 · Tous droits réservés</div>
+    <div class="footer-right">Data Scientist · Ingénieur Statisticien Économiste</div>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal — visible by default, animate when JS loads
+  document.addEventListener('DOMContentLoaded', () => {
+    const els = document.querySelectorAll('.rv');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.remove('hidden');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+    els.forEach(el => io.observe(el));
+  });
+
+  // Animate skill bars
+  document.addEventListener('DOMContentLoaded', () => {
+    const fills = document.querySelectorAll('.level-fill');
+    fills.forEach(f => {
+      const w = f.style.width;
+      f.style.width = '0';
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            setTimeout(() => { f.style.width = w; }, 300);
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      io.observe(f);
+    });
+  });
+</script>
+</body>
+</html>
