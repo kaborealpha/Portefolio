@@ -3,344 +3,284 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alphonse Kaboré — Analyste Statisticien</title>
+<title>Alphonse Kaboré — Analyste Statisticien &amp; Consultant Data</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#EDEEE8;
-    --paper-alt:#E2E3DA;
-    --card:#F6F6F1;
-    --ink:#1B2A3D;
+    --navy:#0F2A43;
+    --navy-2:#183C5E;
+    --gold:#B08D4F;
+    --paper:#FFFFFF;
+    --offwhite:#F4F6F8;
+    --ink:#1C2530;
     --ink-soft:#5B6472;
-    --gold:#B9800E;
-    --teal:#2F6E63;
-    --line:#CBCBC0;
-    --line-strong:#A8A99C;
-    --maxw:1080px;
+    --line:#E3E6EA;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'IBM Plex Sans', sans-serif;
-    font-size:16px;
-    line-height:1.55;
-    -webkit-font-smoothing:antialiased;
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:'Inter',sans-serif; font-size:16px; line-height:1.62; -webkit-font-smoothing:antialiased;
   }
-  ::selection{background:var(--gold); color:var(--paper);}
-  h1,h2,h3{
-    font-family:'Space Grotesk', sans-serif;
-    font-weight:700;
-    color:var(--ink);
-    margin:0;
-    letter-spacing:-0.01em;
-  }
-  .mono{ font-family:'IBM Plex Mono', monospace; }
+  ::selection{ background:var(--gold); color:#fff; }
+  h1,h2,h3{ font-family:'Playfair Display',serif; color:var(--ink); margin:0; font-weight:600; }
   a{ color:inherit; }
-  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 28px; }
-  img{max-width:100%;}
+  .wrap{ max-width:1080px; margin:0 auto; padding:0 32px; }
+  .eyebrow{
+    font-size:0.76rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--gold); display:flex; align-items:center; gap:10px; margin-bottom:16px;
+  }
+  .eyebrow::before{ content:""; width:28px; height:2px; background:var(--gold); display:inline-block; }
 
-  /* ---------- NAV ---------- */
-  header.site{
-    position:sticky; top:0; z-index:50;
-    background:rgba(237,238,232,0.88);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
-  }
-  .navbar{
-    max-width:var(--maxw); margin:0 auto; padding:16px 28px;
-    display:flex; align-items:center; justify-content:space-between;
-  }
-  .brand{
-    font-family:'Space Grotesk'; font-weight:700; font-size:1.05rem;
-    display:flex; align-items:baseline; gap:8px;
-  }
-  .brand .dot{ color:var(--gold); }
-  nav.links{ display:flex; gap:26px; font-size:0.88rem; }
-  nav.links a{
-    text-decoration:none; color:var(--ink-soft); font-weight:500;
-    position:relative; padding-bottom:3px;
-  }
-  nav.links a:hover{ color:var(--ink); }
-  nav.links a::after{
-    content:""; position:absolute; left:0; bottom:0; width:0; height:1px;
-    background:var(--gold); transition:width .25s ease;
-  }
-  nav.links a:hover::after{ width:100%; }
-  .nav-toggle{ display:none; background:none; border:1px solid var(--line-strong); border-radius:6px; padding:7px 10px; cursor:pointer; }
-  .nav-toggle span{ display:block; width:18px; height:2px; background:var(--ink); margin:3px 0; }
-
-  @media (max-width:760px){
-    nav.links{
-      position:fixed; inset:60px 0 auto 0; background:var(--paper);
-      flex-direction:column; padding:18px 28px; gap:16px;
-      border-bottom:1px solid var(--line);
-      transform:translateY(-120%); transition:transform .3s ease;
-    }
+  /* NAV */
+  header.site{ position:sticky; top:0; z-index:60; background:rgba(255,255,255,0.94); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  .navbar{ max-width:1080px; margin:0 auto; padding:18px 32px; display:flex; align-items:center; justify-content:space-between; }
+  .brand{ font-family:'Playfair Display'; font-weight:700; font-size:1.05rem; color:var(--navy); letter-spacing:0.01em; }
+  .brand span{ color:var(--gold); }
+  nav.links{ display:flex; gap:28px; font-size:0.85rem; font-weight:500; }
+  nav.links a{ text-decoration:none; color:var(--ink-soft); }
+  nav.links a:hover{ color:var(--navy); }
+  .nav-cta{ padding:9px 18px; background:var(--navy); color:#fff; border-radius:2px; text-decoration:none; font-size:0.82rem; font-weight:600; }
+  .nav-cta:hover{ background:var(--gold); }
+  .nav-toggle{ display:none; background:none; border:1px solid var(--line); border-radius:6px; padding:7px 10px; cursor:pointer; }
+  .nav-toggle span{ display:block; width:18px; height:2px; background:var(--navy); margin:3px 0; }
+  @media (max-width:820px){
+    nav.links{ position:fixed; inset:64px 0 auto 0; background:#fff; flex-direction:column; padding:18px 32px; gap:16px;
+      border-bottom:1px solid var(--line); transform:translateY(-120%); transition:transform .3s ease; }
     nav.links.open{ transform:translateY(0); }
     .nav-toggle{ display:block; }
+    .nav-cta{ display:none; }
   }
 
-  /* ---------- HERO ---------- */
-  .hero{
-    position:relative; overflow:hidden;
-    padding:96px 0 80px;
-    border-bottom:1px solid var(--line);
-  }
-  .hero .wrap{ position:relative; z-index:2; }
-  .eyebrow{
-    font-family:'IBM Plex Mono'; font-size:0.78rem; letter-spacing:0.14em;
-    text-transform:uppercase; color:var(--teal); margin-bottom:18px;
-    display:flex; align-items:center; gap:10px;
-  }
-  .eyebrow::before{ content:""; width:26px; height:1px; background:var(--teal); display:inline-block; }
-  .hero h1{
-    font-size:clamp(2.4rem, 5.5vw, 4.1rem);
-    line-height:1.04;
-    max-width:11ch;
-  }
-  .hero .role{
-    margin-top:20px; font-size:1.15rem; color:var(--ink-soft); max-width:46ch; font-style:italic;
-  }
-  .hero .pitch{
-    margin-top:22px; max-width:58ch; font-size:1rem; color:var(--ink);
-  }
-  .hero .cta-row{ margin-top:34px; display:flex; flex-wrap:wrap; gap:14px; }
-  .btn{
-    display:inline-flex; align-items:center; gap:8px;
-    padding:12px 20px; border-radius:3px; font-size:0.88rem; font-weight:500;
-    text-decoration:none; border:1px solid var(--ink); transition:all .2s ease;
-  }
-  .btn.primary{ background:var(--ink); color:var(--paper); }
-  .btn.primary:hover{ background:var(--gold); border-color:var(--gold); }
-  .btn.ghost{ background:transparent; color:var(--ink); }
-  .btn.ghost:hover{ background:var(--ink); color:var(--paper); }
+  /* HERO */
+  .hero{ background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%); color:#fff; padding:88px 0 0; position:relative; overflow:hidden; }
+  .hero-grid{ display:grid; grid-template-columns:1.2fr 0.8fr; gap:56px; align-items:center; padding-bottom:64px; }
+  @media (max-width:840px){ .hero-grid{ grid-template-columns:1fr; } }
+  .hero .eyebrow{ color:var(--gold); }
+  .hero h1{ font-size:clamp(2.1rem,4.6vw,3.1rem); line-height:1.16; color:#fff; }
+  .hero .role{ margin-top:14px; font-size:1.08rem; color:#D7DEE8; font-weight:500; }
+  .hero .pitch{ margin-top:20px; max-width:56ch; color:#C4CCD8; font-size:0.98rem; }
+  .cta-row{ margin-top:32px; display:flex; flex-wrap:wrap; gap:14px; }
+  .btn{ display:inline-flex; align-items:center; gap:8px; padding:13px 24px; border-radius:2px; font-size:0.87rem; font-weight:600;
+    text-decoration:none; transition:all .2s ease; }
+  .btn.primary{ background:var(--gold); color:#1C2530; }
+  .btn.primary:hover{ background:#c7a367; }
+  .btn.ghost{ background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,0.4); }
+  .btn.ghost:hover{ border-color:#fff; }
 
-  .hero-chart{
-    position:absolute; right:-4%; top:0; width:52%; height:100%;
-    z-index:1; opacity:0.9;
+  .headshot{ justify-self:center; }
+  .hs-frame{
+    width:250px; height:300px; border:1px solid rgba(176,141,79,0.5); padding:10px;
   }
-  @media (max-width:900px){ .hero-chart{ display:none; } }
+  .hs-frame .art{ width:100%; height:100%; background:linear-gradient(180deg,#22456B,#0F2A43); overflow:hidden; }
 
-  /* ---------- SECTION SCAFFOLD ---------- */
-  section{ padding:76px 0; border-bottom:1px solid var(--line); }
+  .stat-bar{ background:rgba(255,255,255,0.06); border-top:1px solid rgba(255,255,255,0.12); }
+  .stat-grid{ display:grid; grid-template-columns:repeat(4,1fr); }
+  @media (max-width:700px){ .stat-grid{ grid-template-columns:repeat(2,1fr); } }
+  .stat{ padding:26px 10px; text-align:center; border-right:1px solid rgba(255,255,255,0.12); }
+  .stat:last-child{ border-right:none; }
+  .stat .n{ font-family:'Playfair Display'; font-size:1.7rem; color:var(--gold); font-weight:700; }
+  .stat .l{ font-size:0.76rem; color:#B9C2D0; margin-top:4px; text-transform:uppercase; letter-spacing:0.06em; }
+
+  /* SECTIONS */
+  section{ padding:80px 0; border-bottom:1px solid var(--line); }
   section:last-of-type{ border-bottom:none; }
-  .sec-head{
-    display:flex; align-items:baseline; gap:16px; margin-bottom:44px;
-  }
-  .sec-tick{
-    font-family:'IBM Plex Mono'; font-size:0.78rem; color:var(--ink-soft);
-    white-space:nowrap;
-  }
-  .sec-head h2{ font-size:1.7rem; }
-  .sec-head::after{
-    content:""; flex:1; height:1px; background:var(--line-strong); align-self:center;
-  }
-  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
+  section.tint{ background:var(--offwhite); }
+  .sec-title{ max-width:640px; margin-bottom:48px; }
+  .sec-title h2{ font-size:1.9rem; margin-top:6px; }
+  .sec-title p{ margin-top:14px; color:var(--ink-soft); font-size:0.98rem; }
+  .reveal{ opacity:0; transform:translateY(14px); transition:opacity .55s ease, transform .55s ease; }
   .reveal.in{ opacity:1; transform:none; }
 
-  /* ---------- PROFIL ---------- */
-  .profil-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; }
-  @media (max-width:760px){ .profil-grid{ grid-template-columns:1fr; } }
-  .profil-text p{ margin:0 0 16px; color:var(--ink); }
-  .profil-text p:last-child{ margin-bottom:0; }
-  .info-list{ list-style:none; margin:0; padding:0; font-size:0.92rem; }
-  .info-list li{
-    display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid var(--line);
-  }
-  .info-list li:first-child{ padding-top:0; }
-  .info-list span.k{ font-family:'IBM Plex Mono'; color:var(--ink-soft); }
-  .info-list a{ text-decoration:none; }
-  .info-list a:hover{ color:var(--gold); }
+  /* EXPERTISE GRID */
+  .expertise-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+  @media (max-width:820px){ .expertise-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .expertise-grid{ grid-template-columns:1fr; } }
+  .exp-card{ background:#fff; padding:30px 26px; }
+  .exp-card .ic{ width:34px; height:34px; margin-bottom:16px; }
+  .exp-card h3{ font-size:1.02rem; font-weight:600; font-family:'Inter'; }
+  .exp-card p{ font-size:0.87rem; color:var(--ink-soft); margin:9px 0 0; }
 
-  /* ---------- TIMELINE (Expériences) ---------- */
-  .timeline{ position:relative; }
-  .timeline::before{
-    content:""; position:absolute; left:96px; top:6px; bottom:6px; width:1px; background:var(--line-strong);
-  }
-  @media (max-width:640px){ .timeline::before{ left:12px; } }
-  .t-item{ display:grid; grid-template-columns:96px 1fr; gap:0 32px; position:relative; padding-bottom:44px; }
-  .t-item:last-child{ padding-bottom:0; }
-  @media (max-width:640px){ .t-item{ grid-template-columns:1fr; padding-left:32px; } }
-  .t-date{
-    font-family:'IBM Plex Mono'; font-size:0.78rem; color:var(--ink-soft); padding-top:3px; text-align:right;
-  }
-  @media (max-width:640px){ .t-date{ text-align:left; position:absolute; left:0; top:3px; writing-mode:vertical-rl; text-orientation:mixed;} }
-  .t-dot{
-    position:absolute; left:92px; top:6px; width:9px; height:9px; border-radius:50%;
-    background:var(--gold); border:2px solid var(--paper); box-shadow:0 0 0 1px var(--gold);
-  }
-  @media (max-width:640px){ .t-dot{ left:8px; } }
-  .t-body h3{ font-size:1.08rem; font-weight:600; }
-  .t-org{ font-size:0.88rem; color:var(--teal); margin-top:4px; font-weight:500; }
-  .t-body ul{ margin:12px 0 0; padding-left:18px; font-size:0.92rem; color:var(--ink); }
-  .t-body ul li{ margin-bottom:5px; }
+  /* EXPERIENCE LIST */
+  .xp-row{ display:grid; grid-template-columns:190px 1fr; gap:34px; padding:28px 0; border-top:1px solid var(--line); }
+  .xp-row:first-of-type{ border-top:none; }
+  @media (max-width:700px){ .xp-row{ grid-template-columns:1fr; gap:8px; } }
+  .xp-date{ font-size:0.82rem; font-weight:600; color:var(--gold); text-transform:uppercase; letter-spacing:0.04em; padding-top:2px; }
+  .xp-body h3{ font-size:1.08rem; font-weight:600; font-family:'Inter'; }
+  .xp-org{ font-size:0.87rem; color:var(--navy-2); font-weight:600; margin-top:4px; }
+  .xp-body ul{ margin:12px 0 0; padding-left:19px; font-size:0.92rem; color:var(--ink); }
+  .xp-body ul li{ margin-bottom:6px; }
+  .xp-body ul li::marker{ color:var(--gold); }
 
-  /* ---------- COMPETENCES ---------- */
-  .comp-cols{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; }
-  @media (max-width:800px){ .comp-cols{ grid-template-columns:1fr; } }
-  .comp-block{ margin-bottom:28px; }
-  .comp-block h4{
-    font-family:'IBM Plex Mono'; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em;
-    color:var(--ink-soft); margin:0 0 12px;
-  }
-  .chip-row{ display:flex; flex-wrap:wrap; gap:8px; }
-  .chip{
-    font-size:0.82rem; padding:7px 13px; border:1px solid var(--line-strong); border-radius:20px;
-    background:var(--card); color:var(--ink); white-space:nowrap;
-  }
-  .stat-list{ list-style:none; margin:0; padding:0; font-size:0.92rem; }
-  .stat-list li{ padding:9px 0; border-bottom:1px dashed var(--line); }
-  .stat-list li:last-child{ border-bottom:none; }
-  .tool-table{ width:100%; border-collapse:collapse; font-size:0.88rem; margin-top:4px; }
-  .tool-table td{ padding:10px 0; border-bottom:1px solid var(--line); vertical-align:top; }
-  .tool-table td.domain{ width:38%; font-family:'IBM Plex Mono'; color:var(--ink-soft); font-size:0.78rem; padding-right:12px; }
+  /* PROJECTS */
+  .case-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+  @media (max-width:760px){ .case-grid{ grid-template-columns:1fr; } }
+  .case{ background:#fff; padding:28px 26px; display:flex; flex-direction:column; gap:10px; }
+  .case .tag{ font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--gold); }
+  .case h3{ font-size:1.02rem; font-weight:600; font-family:'Inter'; line-height:1.35; }
+  .case p{ font-size:0.87rem; color:var(--ink-soft); margin:0; flex:1; }
+  .case a{ font-size:0.8rem; font-weight:600; color:var(--navy-2); text-decoration:none; margin-top:4px; }
+  .case a:hover{ color:var(--gold); }
 
-  /* ---------- PROJETS ---------- */
-  .proj-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
-  @media (max-width:760px){ .proj-grid{ grid-template-columns:1fr; } }
-  .proj-card{
-    background:var(--card); border:1px solid var(--line); border-radius:4px; padding:26px;
-    display:flex; flex-direction:column; gap:10px; transition:border-color .2s ease, transform .2s ease;
-  }
-  .proj-card:hover{ border-color:var(--gold); transform:translateY(-3px); }
-  .proj-card h3{ font-size:1rem; font-weight:600; line-height:1.3; }
-  .proj-card p{ font-size:0.88rem; color:var(--ink-soft); margin:0; flex:1; }
-  .proj-card .link{
-    font-family:'IBM Plex Mono'; font-size:0.76rem; color:var(--teal); text-decoration:none; word-break:break-all;
-  }
-  .proj-card .link:hover{ color:var(--gold); }
+  /* SKILLS */
+  .skill-cols{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; }
+  @media (max-width:800px){ .skill-cols{ grid-template-columns:1fr; } }
+  .skill-list{ list-style:none; margin:0; padding:0; }
+  .skill-list li{ padding:13px 0; border-bottom:1px solid var(--line); font-size:0.92rem; display:flex; gap:12px; }
+  .skill-list li:last-child{ border-bottom:none; }
+  .skill-list li::before{ content:"—"; color:var(--gold); font-weight:700; flex:none; }
+  .tool-table{ width:100%; border-collapse:collapse; font-size:0.88rem; }
+  .tool-table td{ padding:12px 0; border-bottom:1px solid var(--line); vertical-align:top; }
+  .tool-table td.domain{ width:40%; color:var(--navy-2); font-weight:600; padding-right:14px; font-size:0.84rem; }
 
-  /* ---------- FORMATION / CERTIFS ---------- */
+  /* FORMATION */
   .two-col{ display:grid; grid-template-columns:1fr 1fr; gap:56px; }
   @media (max-width:760px){ .two-col{ grid-template-columns:1fr; } }
-  .edu-item{ margin-bottom:26px; }
-  .edu-item:last-child{ margin-bottom:0; }
-  .edu-item h3{ font-size:0.98rem; font-weight:600; }
-  .edu-item .when{ font-family:'IBM Plex Mono'; font-size:0.76rem; color:var(--ink-soft); margin-top:3px; }
-  .edu-item p{ font-size:0.88rem; margin:8px 0 0; color:var(--ink); }
+  .edu-item{ padding:20px 0; border-top:1px solid var(--line); }
+  .edu-item:first-child{ border-top:none; }
+  .edu-item h3{ font-size:0.98rem; font-weight:600; font-family:'Inter'; }
+  .edu-item .when{ font-size:0.78rem; font-weight:600; color:var(--gold); text-transform:uppercase; letter-spacing:0.04em; margin-top:5px; }
+  .edu-item p{ font-size:0.87rem; margin:9px 0 0; color:var(--ink-soft); }
   .cert-list{ list-style:none; margin:0; padding:0; }
-  .cert-list li{
-    display:flex; gap:14px; padding:12px 0; border-bottom:1px solid var(--line); font-size:0.9rem;
-  }
-  .cert-list li:last-child{ border-bottom:none; }
-  .cert-list .when{ font-family:'IBM Plex Mono'; font-size:0.76rem; color:var(--gold); white-space:nowrap; padding-top:2px; }
+  .cert-list li{ display:flex; justify-content:space-between; gap:14px; padding:14px 0; border-top:1px solid var(--line); font-size:0.89rem; }
+  .cert-list li:first-child{ border-top:none; }
+  .cert-list .when{ font-size:0.76rem; color:var(--ink-soft); white-space:nowrap; padding-top:2px; }
 
-  /* ---------- LANGUES ---------- */
-  .lang-row{ display:flex; gap:36px; flex-wrap:wrap; }
-  .lang-item{ min-width:180px; }
-  .lang-item .name{ font-weight:600; font-size:1rem; }
-  .lang-item .level{ font-size:0.82rem; color:var(--ink-soft); margin-top:4px; }
-  .bar{ margin-top:10px; height:4px; background:var(--line); border-radius:2px; overflow:hidden; }
-  .bar span{ display:block; height:100%; background:var(--teal); }
+  /* LANGUES */
+  .lang-row{ display:flex; gap:48px; flex-wrap:wrap; }
+  .lang-item .name{ font-family:'Playfair Display'; font-weight:600; font-size:1.05rem; }
+  .lang-item .level{ font-size:0.85rem; color:var(--ink-soft); margin-top:6px; max-width:26ch; }
 
-  /* ---------- FOOTER / CONTACT ---------- */
-  footer{
-    background:var(--ink); color:var(--paper); padding:64px 0 40px;
-  }
-  footer h2{ color:var(--paper); font-size:2rem; max-width:14ch; }
-  footer .sub{ color:#B9C0CC; margin-top:14px; max-width:48ch; font-size:0.95rem; }
-  .foot-links{ margin-top:36px; display:flex; flex-wrap:wrap; gap:28px; }
-  .foot-links a{
-    text-decoration:none; color:var(--paper); font-family:'IBM Plex Mono'; font-size:0.85rem;
-    border-bottom:1px solid rgba(237,238,232,0.35); padding-bottom:4px;
-  }
+  /* FOOTER */
+  footer{ background:var(--navy); color:#fff; padding:76px 0 40px; }
+  .foot-grid{ display:grid; grid-template-columns:1.2fr 0.8fr; gap:44px; }
+  @media (max-width:700px){ .foot-grid{ grid-template-columns:1fr; } }
+  footer h2{ color:#fff; font-size:2.05rem; max-width:15ch; }
+  footer .sub{ color:#C4CCD8; margin-top:16px; max-width:46ch; font-size:0.96rem; }
+  footer .cta-row .btn.primary{ color:#12233A; }
+  .foot-links{ display:flex; flex-direction:column; gap:15px; font-size:0.93rem; }
+  .foot-links .lbl{ font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color:#8493A8; margin-bottom:2px; }
+  .foot-links a{ text-decoration:none; color:#fff; border-bottom:1px solid rgba(255,255,255,0.25); padding-bottom:4px; width:fit-content; }
   .foot-links a:hover{ border-color:var(--gold); color:var(--gold); }
-  .foot-bottom{
-    margin-top:56px; padding-top:20px; border-top:1px solid rgba(237,238,232,0.15);
-    font-size:0.76rem; color:#8B93A0; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
-  }
+  .foot-bottom{ margin-top:56px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.14); font-size:0.76rem; color:#7C899C;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
 </style>
 </head>
 <body>
 
 <header class="site">
   <div class="navbar">
-    <div class="brand">KABORÉ<span class="dot">·</span>Alphonse</div>
-    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    <div class="brand">KABORÉ <span>Alphonse</span></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
     <nav class="links" id="navLinks">
-      <a href="#profil">Profil</a>
-      <a href="#experiences">Expériences</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#experiences">Expérience</a>
+      <a href="#projets">Études de cas</a>
       <a href="#competences">Compétences</a>
-      <a href="#projets">Projets</a>
       <a href="#formation">Formation</a>
       <a href="#contact">Contact</a>
     </nav>
+    <a class="nav-cta" href="mailto:kaborealphonse75@gmail.com">Me contacter</a>
   </div>
 </header>
 
 <section class="hero">
-  <svg class="hero-chart" viewBox="0 0 480 520" xmlns="http://www.w3.org/2000/svg">
-    <line x1="40" y1="480" x2="440" y2="480" stroke="var(--line-strong)" stroke-width="1"/>
-    <line x1="40" y1="40" x2="40" y2="480" stroke="var(--line-strong)" stroke-width="1"/>
-    <path d="M40,440 C120,410 160,320 220,270 C280,220 330,150 440,70" fill="none" stroke="var(--gold)" stroke-width="1.4" opacity="0.85"/>
-    <g fill="var(--teal)" opacity="0.9">
-      <circle cx="70" cy="430" r="5"/>
-      <circle cx="120" cy="400" r="5"/>
-      <circle cx="150" cy="360" r="6"/>
-      <circle cx="190" cy="330" r="5"/>
-      <circle cx="230" cy="280" r="7"/>
-      <circle cx="270" cy="245" r="5"/>
-      <circle cx="310" cy="200" r="6"/>
-      <circle cx="350" cy="160" r="5"/>
-      <circle cx="390" cy="120" r="7"/>
-      <circle cx="420" cy="85" r="5"/>
-    </g>
-    <g fill="var(--gold)" opacity="0.6">
-      <circle cx="95" cy="450" r="3"/>
-      <circle cx="175" cy="390" r="3"/>
-      <circle cx="255" cy="310" r="3"/>
-      <circle cx="335" cy="230" r="3"/>
-      <circle cx="405" cy="150" r="3"/>
-    </g>
-    <text x="40" y="500" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-soft)">2020</text>
-    <text x="405" y="500" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-soft)">2026</text>
-  </svg>
   <div class="wrap">
-    <div class="eyebrow">Ouagadougou, Burkina Faso</div>
-    <h1>Alphonse<br>Kaboré</h1>
-    <p class="role">Analyste statisticien &amp; ingénieur statisticien économiste en formation — ISSP, Université Joseph KI-ZERBO</p>
-    <p class="pitch">Transformer les données en intelligence décisionnelle.</p>
-    <div class="cta-row">
-      <a class="btn primary" href="mailto:kaborealphonse75@gmail.com">Écrire un email</a>
-      <a class="btn ghost" href="https://kaborealpha.github.io" target="_blank" rel="noopener">Voir le Github ↗</a>
-    </div>
-  </div>
-</section>
-
-<section id="profil">
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-tick mono">§ 01</span><h2>Profil</h2></div>
-    <div class="profil-grid">
-      <div class="profil-text reveal">
-        <p>Titulaire d'une licence professionnelle en Analyse Statistique, option Informatique décisionnelle, à l'ISSP (Université Joseph Ki-Zerbo), je poursuis aujourd'hui une formation d'ingénieur statisticien économiste.</p>
-        <p>Je possède une solide maîtrise de la collecte de données qualitatives et quantitatives, du traitement et de l'analyse des données, et de leur visualisation. J'accorde une importance particulière au partage des connaissances, au travail collaboratif et au sens des responsabilités.</p>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Analyste Statisticien · Ouagadougou, Burkina Faso</div>
+        <h1>Une expertise statistique et économétrique au service de la décision.</h1>
+        <p class="role">Ingénieur Statisticien Économiste en formation — ISSP, Université Joseph KI-ZERBO</p>
+        <p class="pitch">Transformer les données en intelligence décisionnelle.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="mailto:kaborealphonse75@gmail.com">Discuter d'un projet</a>
+          <a class="btn ghost" href="https://kaborealpha.github.io" target="_blank" rel="noopener">Voir mes travaux</a>
+        </div>
       </div>
-      <ul class="info-list reveal">
-        <li><span class="k mono">Téléphone</span><span>(+226) 75 98 73 67</span></li>
-        <li><span class="k mono">Email</span><a href="mailto:kaborealphonse75@gmail.com">kaborealphonse75@gmail.com</a></li>
-        <li><span class="k mono">Github</span><a href="https://kaborealpha.github.io" target="_blank" rel="noopener">kaborealpha.github.io</a></li>
-        <li><span class="k mono">Lieu</span><span>Ouagadougou, Burkina Faso</span></li>
-        <li><span class="k mono">Institut</span><span>ISSP — UJKZ</span></li>
-      </ul>
+      <div class="headshot">
+        <div class="hs-frame">
+          <div class="art">
+            <svg viewBox="0 0 250 300" width="100%" height="100%">
+              <rect width="250" height="300" fill="#0F2A43"/>
+              <circle cx="125" cy="118" r="58" fill="#1F4A72"/>
+              <path d="M45,300 C45,225 78,190 125,190 C172,190 205,225 205,300 Z" fill="#16324F"/>
+              <path d="M70,104 C70,66 95,44 125,44 C158,44 182,68 180,106 C174,90 158,78 144,80 C130,82 120,70 114,78 C106,88 86,82 78,98 Z" fill="#0A1B2C"/>
+              <circle cx="125" cy="118" r="58" fill="none" stroke="#B08D4F" stroke-width="1" opacity="0.5"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="stat-bar">
+    <div class="wrap">
+      <div class="stat-grid">
+        <div class="stat"><div class="n">3+</div><div class="l">Ans d'expérience</div></div>
+        <div class="stat"><div class="n">6</div><div class="l">Missions &amp; expériences</div></div>
+        <div class="stat"><div class="n">9</div><div class="l">Projets réalisés</div></div>
+        <div class="stat"><div class="n">3</div><div class="l">Langues parlées</div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="experiences">
+<section id="expertise">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-tick mono">§ 02</span><h2>Expériences pertinentes</h2></div>
-    <div class="timeline">
+    <div class="sec-title reveal">
+      <div class="eyebrow" style="color:var(--gold);">Domaines d'expertise</div>
+      <h2>Ce que je peux apporter à votre organisation</h2>
+      <p>Une pratique construite sur le terrain — enquêtes, formation, développement — et rigoureusement fondée en économétrie et en science des données.</p>
+    </div>
+    <div class="expertise-grid reveal">
+      <div class="exp-card">
+        <svg class="ic" viewBox="0 0 34 34"><rect x="4" y="18" width="5" height="12" fill="#B08D4F"/><rect x="14.5" y="10" width="5" height="20" fill="#0F2A43"/><rect x="25" y="4" width="5" height="26" fill="#B08D4F"/></svg>
+        <h3>Économétrie appliquée</h3>
+        <p>Modèles linéaires et non linéaires, séries temporelles (ARIMA, SARIMA, ARDL, GARCH), modèles de durée et estimations robustes.</p>
+      </div>
+      <div class="exp-card">
+        <svg class="ic" viewBox="0 0 34 34"><circle cx="10" cy="10" r="4" fill="#0F2A43"/><circle cx="24" cy="10" r="4" fill="#B08D4F"/><circle cx="17" cy="24" r="4" fill="#0F2A43"/><path d="M10,14 L17,20 M24,14 L17,20" stroke="#B08D4F" stroke-width="1.4"/></svg>
+        <h3>Machine Learning</h3>
+        <p>Modèles supervisés et non supervisés — forêts aléatoires, XGBoost, réseaux de neurones, DBSCAN — appliqués à des cas concrets.</p>
+      </div>
+      <div class="exp-card">
+        <svg class="ic" viewBox="0 0 34 34"><rect x="5" y="6" width="24" height="22" rx="1" fill="none" stroke="#0F2A43" stroke-width="1.6"/><path d="M9,13 h16 M9,18 h16 M9,23 h10" stroke="#B08D4F" stroke-width="1.6"/></svg>
+        <h3>Enquêtes &amp; collecte de données</h3>
+        <p>Conception de questionnaires, collecte numérique via ODK et CSPro, enquêtes téléphoniques et en face-à-face, apurement statistique.</p>
+      </div>
+      <div class="exp-card">
+        <svg class="ic" viewBox="0 0 34 34"><path d="M6,28 L6,10 L28,10 L28,28 Z" fill="none" stroke="#0F2A43" stroke-width="1.6"/><path d="M6,10 L17,4 L28,10" fill="none" stroke="#B08D4F" stroke-width="1.6"/></svg>
+        <h3>Formation &amp; renforcement de capacités</h3>
+        <p>Conception et animation de modules — R, Python, machine learning, analyse statistique — pour publics spécialistes et non-spécialistes.</p>
+      </div>
+      <div class="exp-card">
+        <svg class="ic" viewBox="0 0 34 34"><rect x="5" y="20" width="5" height="9" fill="#0F2A43"/><rect x="14.5" y="14" width="5" height="15" fill="#B08D4F"/><rect x="24" y="6" width="5" height="23" fill="#0F2A43"/></svg>
+        <h3>Visualisation &amp; Business Intelligence</h3>
+        <p>Tableaux de bord dynamiques avec R Shiny, Power BI, Streamlit et Tableau, pensés pour l'aide à la décision.</p>
+      </div>
+      <div class="exp-card">
+        <svg class="ic" viewBox="0 0 34 34"><rect x="4" y="6" width="26" height="22" rx="1" fill="none" stroke="#0F2A43" stroke-width="1.6"/><path d="M9,13 L14,18 L9,23 M17,23 h9" stroke="#B08D4F" stroke-width="1.6" fill="none"/></svg>
+        <h3>Développement d'outils web</h3>
+        <p>Applications Django, sites institutionnels et outils métiers connectés à des bases MySQL, PostgreSQL ou MongoDB.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="t-item reveal"><div class="t-dot"></div>
-        <div class="t-date">Sept.–Oct.<br>2025</div>
-        <div class="t-body">
+<section id="experiences" class="tint">
+  <div class="wrap">
+    <div class="sec-title reveal">
+      <div class="eyebrow">Parcours</div>
+      <h2>Expérience professionnelle</h2>
+    </div>
+    <div class="reveal">
+
+      <div class="xp-row">
+        <div class="xp-date">Sept.–Oct. 2025</div>
+        <div class="xp-body">
           <h3>Formateur — Python, Django &amp; Analyse de données</h3>
-          <div class="t-org">Centre de formation, Ouagadougou</div>
+          <div class="xp-org">Centre de formation, Ouagadougou</div>
           <ul>
             <li>Initiation à Python, Pandas et à l'analyse de données pour des apprenants non-spécialistes</li>
             <li>Conception et animation de modules de formation de bout en bout</li>
@@ -348,11 +288,11 @@
         </div>
       </div>
 
-      <div class="t-item reveal"><div class="t-dot"></div>
-        <div class="t-date">Depuis<br>Juin 2025</div>
-        <div class="t-body">
+      <div class="xp-row">
+        <div class="xp-date">Depuis juin 2025</div>
+        <div class="xp-body">
           <h3>Chargé de cours — Statistique descriptive appliquée au tourisme</h3>
-          <div class="t-org">École Supérieure du Tourisme et Hôtellerie (ESTH)</div>
+          <div class="xp-org">École Supérieure du Tourisme et Hôtellerie (ESTH)</div>
           <ul>
             <li>Cours magistraux de statistiques appliquées au tourisme</li>
             <li>Travaux pratiques sur Microsoft Excel</li>
@@ -362,11 +302,11 @@
         </div>
       </div>
 
-      <div class="t-item reveal"><div class="t-dot"></div>
-        <div class="t-date">Juil.–Août<br>2025</div>
-        <div class="t-body">
+      <div class="xp-row">
+        <div class="xp-date">Juil.–Août 2025</div>
+        <div class="xp-body">
           <h3>Assistant formateur — Machine Learning, Scraping &amp; Analyse de réseaux</h3>
-          <div class="t-org">École d'été SICSS-ISSP-UQAM</div>
+          <div class="xp-org">École d'été SICSS-ISSP-UQAM</div>
           <ul>
             <li>Encadrement de participants sur R, web scraping, analyse de texte et de réseaux</li>
             <li>Formation aux modèles de machine learning et bonnes pratiques en data science</li>
@@ -374,11 +314,11 @@
         </div>
       </div>
 
-      <div class="t-item reveal"><div class="t-dot"></div>
-        <div class="t-date">2025</div>
-        <div class="t-body">
+      <div class="xp-row">
+        <div class="xp-date">2025</div>
+        <div class="xp-body">
           <h3>Hackathon IA &amp; Santé — Plateforme de gestion des transfusions sanguines</h3>
-          <div class="t-org">AEMBF, Ouagadougou</div>
+          <div class="xp-org">AEMBF, Ouagadougou</div>
           <ul>
             <li>Développement d'une solution IA pour optimiser la disponibilité des stocks de sang</li>
             <li>Travail en équipe pluridisciplinaire sous contrainte de temps</li>
@@ -386,11 +326,11 @@
         </div>
       </div>
 
-      <div class="t-item reveal"><div class="t-dot"></div>
-        <div class="t-date">Août–Déc.<br>2024</div>
-        <div class="t-body">
+      <div class="xp-row">
+        <div class="xp-date">Août–Déc. 2024</div>
+        <div class="xp-body">
           <h3>Assistant technique — Projet KIX-SEEDS</h3>
-          <div class="t-org">ISSP, Université Joseph Ki-Zerbo</div>
+          <div class="xp-org">ISSP, Université Joseph Ki-Zerbo</div>
           <ul>
             <li>Déploiement d'outils de collecte numérique et développement d'un tableau de bord R Shiny</li>
             <li>Conception de questionnaires et d'architectures de systèmes de données</li>
@@ -398,11 +338,11 @@
         </div>
       </div>
 
-      <div class="t-item reveal"><div class="t-dot"></div>
-        <div class="t-date">Août–Sept.<br>2023</div>
-        <div class="t-body">
+      <div class="xp-row">
+        <div class="xp-date">Août–Sept. 2023</div>
+        <div class="xp-body">
           <h3>Traitement des données RGA2</h3>
-          <div class="t-org">DGESS — MARAH</div>
+          <div class="xp-org">DGESS — MARAH</div>
           <ul>
             <li>Apurement et traitement statistique des données du recensement général agricole</li>
           </ul>
@@ -413,85 +353,61 @@
   </div>
 </section>
 
-<section id="competences">
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-tick mono">§ 03</span><h2>Compétences clés</h2></div>
-    <div class="comp-cols">
-      <div class="reveal">
-        <div class="comp-block">
-          <h4>Statistique &amp; économétrie</h4>
-          <ul class="stat-list">
-            <li>Statistiques descriptives (univariée, bivariée) &amp; analyse multidimensionnelle — ACP, AFC, ACM, classification</li>
-            <li>Modèles linéaires et non linéaires — variables binaires, multinomiales, de comptage (Poisson, binomiale négative), limitées (Tobit simple / généralisé)</li>
-            <li>Modèles de durée — paramétriques et semi-paramétriques</li>
-            <li>Séries temporelles — moyenne mobile, Holt-Winters, AR, MA, ARIMA, SARIMA, ARDL, GARCH</li>
-            <li>Estimation et tests d'hypothèses — paramétriques, semi-paramétriques et non paramétriques (Mann-Whitney, Wilcoxon, Kruskal-Wallis, Kolmogorov-Smirnov, Spearman, Kendall)</li>
-            <li>Enquêtes statistiques — téléphoniques et en face-à-face</li>
-            <li>Machine learning — logit/probit, forêt aléatoire, XGBoost, réseaux de neurones, DBSCAN</li>
-          </ul>
-        </div>
-      </div>
-      <div class="reveal">
-        <div class="comp-block">
-          <h4>Outils &amp; technologies</h4>
-          <table class="tool-table">
-            <tr><td class="domain">Analyse de données</td><td>R, Python, STATA, SPSS</td></tr>
-            <tr><td class="domain">Développement web</td><td>Django, HTML, CSS, JavaScript</td></tr>
-            <tr><td class="domain">Bases de données</td><td>MySQL, PostgreSQL, MongoDB, Redis, Neo4j</td></tr>
-            <tr><td class="domain">BI &amp; visualisation</td><td>Power BI, R Shiny, Streamlit, Tableau</td></tr>
-            <tr><td class="domain">Collecte &amp; scraping</td><td>ODK, CSPro, R</td></tr>
-            <tr><td class="domain">Cloud &amp; DevOps</td><td>PythonAnywhere, GitHub Pages, AWS</td></tr>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="projets">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-tick mono">§ 04</span><h2>Projets &amp; réalisations</h2></div>
-    <div class="proj-grid">
+    <div class="sec-title reveal">
+      <div class="eyebrow" style="color:var(--gold);">Réalisations</div>
+      <h2>Études de cas sélectionnées</h2>
+    </div>
+    <div class="case-grid reveal">
 
-      <div class="proj-card reveal">
+      <div class="case">
+        <span class="tag">Socio-économie</span>
         <h3>Résilience des ménages face aux chocs — EHCVM 2021</h3>
         <p>Analyse statistique des données d'enquête EHCVM 2021 (Burkina Faso) pour étudier les stratégies d'adaptation des ménages face aux chocs économiques et sociaux.</p>
       </div>
 
-      <div class="proj-card reveal">
+      <div class="case">
+        <span class="tag">Machine Learning</span>
         <h3>Détection de maladies des feuilles de tomate par IA</h3>
         <p>Modèle de classification d'images fondé sur des réseaux de neurones convolutifs (CNN, ResNet, MobileNet) pour la détection automatique des maladies foliaires.</p>
       </div>
 
-      <div class="proj-card reveal">
+      <div class="case">
+        <span class="tag">Macroéconomie</span>
         <h3>Prix de l'or &amp; croissance économique au Burkina Faso</h3>
         <p>Analyse économétrique ARDL des effets de court et long terme des fluctuations du prix de l'or sur la croissance économique nationale.</p>
       </div>
 
-      <div class="proj-card reveal">
+      <div class="case">
+        <span class="tag">Macroéconomie</span>
         <h3>Facteurs de la croissance économique au Burkina Faso</h3>
         <p>Modélisation économétrique des déterminants de la croissance à travers des régressions multiples et l'analyse de données macroéconomiques.</p>
       </div>
 
-      <div class="proj-card reveal">
+      <div class="case">
+        <span class="tag">Développement web</span>
         <h3>StatsDecision — application web full-stack Django</h3>
         <p>Conception et déploiement d'un site institutionnel présentant les activités, services et projets du cabinet StatsDecision.</p>
-        <a class="link" href="https://kaborealphonse.pythonanywhere.com" target="_blank" rel="noopener">kaborealphonse.pythonanywhere.com ↗</a>
+        <a href="https://kaborealphonse.pythonanywhere.com" target="_blank" rel="noopener">Voir le site ↗</a>
       </div>
 
-      <div class="proj-card reveal">
+      <div class="case">
+        <span class="tag">Développement web</span>
         <h3>Mecaforce — gestion de quincaillerie</h3>
         <p>Application web de gestion des ventes, des stocks et des opérations commerciales pour une quincaillerie.</p>
-        <a class="link" href="https://mecaforce.pythonanywhere.com" target="_blank" rel="noopener">mecaforce.pythonanywhere.com ↗</a>
+        <a href="https://mecaforce.pythonanywhere.com" target="_blank" rel="noopener">Voir le site ↗</a>
       </div>
 
-      <div class="proj-card reveal">
+      <div class="case">
+        <span class="tag">Business Intelligence</span>
         <h3>Dashboard R Shiny d'indicateurs statistiques</h3>
         <p>Tableau de bord dynamique pour la visualisation et l'analyse d'indicateurs statistiques, conçu comme outil d'aide à la décision.</p>
-        <a class="link" href="https://dashbor.shinyapps.io/indicateur/" target="_blank" rel="noopener">dashbor.shinyapps.io/indicateur ↗</a>
+        <a href="https://dashbor.shinyapps.io/indicateur/" target="_blank" rel="noopener">Voir le dashboard ↗</a>
       </div>
 
-      <div class="proj-card reveal">
+      <div class="case">
+        <span class="tag">Systèmes d'information</span>
         <h3>Application Access de gestion des notes — ISSP</h3>
         <p>Co-conception d'une application Microsoft Access pour la gestion et le suivi des notes des étudiants à l'ISSP.</p>
       </div>
@@ -500,80 +416,113 @@
   </div>
 </section>
 
+<section id="competences" class="tint">
+  <div class="wrap">
+    <div class="sec-title reveal">
+      <div class="eyebrow">Boîte à outils</div>
+      <h2>Compétences clés</h2>
+    </div>
+    <div class="skill-cols reveal">
+      <div>
+        <h3 style="font-size:1rem;font-family:'Inter';font-weight:600;margin-bottom:14px;">Statistique &amp; économétrie</h3>
+        <ul class="skill-list">
+          <li>Statistiques descriptives et analyse multidimensionnelle — ACP, AFC, ACM, classification</li>
+          <li>Modèles linéaires et non linéaires — binaires, multinomiales, comptage, Tobit simple / généralisé</li>
+          <li>Modèles de durée — paramétriques et semi-paramétriques</li>
+          <li>Séries temporelles — Holt-Winters, AR, MA, ARIMA, SARIMA, ARDL, GARCH</li>
+          <li>Tests d'hypothèses paramétriques, semi- et non paramétriques</li>
+          <li>Machine learning — logit/probit, forêt aléatoire, XGBoost, réseaux de neurones, DBSCAN</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size:1rem;font-family:'Inter';font-weight:600;margin-bottom:14px;">Outils &amp; technologies</h3>
+        <table class="tool-table">
+          <tr><td class="domain">Analyse de données</td><td>R, Python, STATA, SPSS</td></tr>
+          <tr><td class="domain">Développement web</td><td>Django, HTML, CSS, JavaScript</td></tr>
+          <tr><td class="domain">Bases de données</td><td>MySQL, PostgreSQL, MongoDB, Redis, Neo4j</td></tr>
+          <tr><td class="domain">BI &amp; visualisation</td><td>Power BI, R Shiny, Streamlit, Tableau</td></tr>
+          <tr><td class="domain">Collecte &amp; scraping</td><td>ODK, CSPro, R</td></tr>
+          <tr><td class="domain">Cloud &amp; DevOps</td><td>PythonAnywhere, GitHub Pages, AWS</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="formation">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-tick mono">§ 05</span><h2>Formation</h2></div>
-    <div class="two-col">
-      <div class="reveal">
+    <div class="sec-title reveal">
+      <div class="eyebrow" style="color:var(--gold);">Crédentiels</div>
+      <h2>Formation &amp; certifications</h2>
+    </div>
+    <div class="two-col reveal">
+      <div>
         <div class="edu-item">
           <h3>Ingénieur Statisticien Économiste (en cours)</h3>
-          <div class="when">ISSP — Université Joseph Ki-Zerbo · Depuis oct. 2024</div>
+          <div class="when">ISSP — UJKZ · depuis oct. 2024</div>
         </div>
         <div class="edu-item">
-          <h3>Licence Professionnelle — Analyse Statistique, option Informatique Décisionnelle</h3>
-          <div class="when">ISSP — Université Joseph Ki-Zerbo · Oct. 2021 – Déc. 2024</div>
+          <h3>Licence Pro — Analyse Statistique, Informatique Décisionnelle</h3>
+          <div class="when">ISSP — UJKZ · oct. 2021 – déc. 2024</div>
           <p>Mémoire : « Défis de la numérisation du système statistique scolaire au Burkina Faso »</p>
         </div>
         <div class="edu-item">
           <h3>MPSI — Math Physique Sciences de l'Ingénieur</h3>
-          <div class="when">École Polytechnique de Ouagadougou · Oct. 2020 – Oct. 2021</div>
+          <div class="when">École Polytechnique de Ouagadougou · 2020–2021</div>
         </div>
         <div class="edu-item">
           <h3>Baccalauréat Série C</h3>
           <div class="when">Lycée Provincial Dimdolobsom de Boussé · 2020</div>
         </div>
       </div>
-      <div class="reveal">
-        <h4 class="mono" style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-soft);margin-bottom:12px;">Certifications &amp; distinctions</h4>
+      <div>
         <ul class="cert-list">
-          <li><span class="when">02/2026</span><span>Google Data Analytics — Fondations (Coursera)</span></li>
-          <li><span class="when">07/2025</span><span>Conception d'un cadre de suivi-évaluation (UNICEF) — Attestation de réussite</span></li>
-          <li><span class="when">06/2025</span><span>Certificat d'Assistant Formateur — École d'été SICSS-ISSP-UQAM</span></li>
-          <li><span class="when">04/2024</span><span>Data Scraping Challenge, Open Burkina — 2ᵉ place</span></li>
-          <li><span class="when">03/2024</span><span>Certification Marketing Digital — Université Numérique Cheikh Anta Diop</span></li>
+          <li><span>Google Data Analytics — Fondations (Coursera)</span><span class="when">Fév. 2026</span></li>
+          <li><span>Conception d'un cadre de suivi-évaluation — UNICEF</span><span class="when">Juil. 2025</span></li>
+          <li><span>Certificat d'Assistant Formateur — SICSS-ISSP-UQAM</span><span class="when">Juin 2025</span></li>
+          <li><span>Data Scraping Challenge, Open Burkina — 2ᵉ place</span><span class="when">Avr. 2024</span></li>
+          <li><span>Certification Marketing Digital — UN Cheikh Anta Diop</span><span class="when">Mars 2024</span></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section id="langues">
+<section id="langues" class="tint">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-tick mono">§ 06</span><h2>Langues</h2></div>
-    <div class="lang-row">
-      <div class="lang-item reveal">
-        <div class="name">Français</div>
-        <div class="level">Très bien — courant</div>
-        <div class="bar"><span style="width:96%"></span></div>
-      </div>
-      <div class="lang-item reveal">
-        <div class="name">Anglais</div>
-        <div class="level">Assez bien — courant · Certificate of Excellence (EYE), avril 2026</div>
-        <div class="bar"><span style="width:72%"></span></div>
-      </div>
-      <div class="lang-item reveal">
-        <div class="name">Mooré</div>
-        <div class="level">Langue maternelle</div>
-        <div class="bar"><span style="width:100%"></span></div>
-      </div>
+    <div class="sec-title reveal">
+      <div class="eyebrow">Communication</div>
+      <h2>Langues</h2>
+    </div>
+    <div class="reveal lang-row">
+      <div class="lang-item"><div class="name">Français</div><div class="level">Très bien — courant</div></div>
+      <div class="lang-item"><div class="name">Anglais</div><div class="level">Assez bien — courant. Certificate of Excellence (EYE), avril 2026</div></div>
+      <div class="lang-item"><div class="name">Mooré</div><div class="level">Langue maternelle</div></div>
     </div>
   </div>
 </section>
 
 <footer id="contact">
-  <div class="wrap">
-    <h2>Discutons de votre prochain projet de données.</h2>
-    <p class="sub">Disponible pour des missions d'analyse statistique, de modélisation économétrique, de formation ou de développement de tableaux de bord.</p>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="eyebrow" style="color:var(--gold);">Disponibilité</div>
+      <h2>Discutons de votre prochaine mission de données.</h2>
+      <p class="sub">Disponible pour des missions d'analyse statistique, de modélisation économétrique, de formation ou de développement de tableaux de bord — en présentiel à Ouagadougou ou à distance.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="mailto:kaborealphonse75@gmail.com">Écrire un email</a>
+        <a class="btn ghost" href="tel:+22675987367">(+226) 75 98 73 67</a>
+      </div>
+    </div>
     <div class="foot-links">
-      <a href="mailto:kaborealphonse75@gmail.com">kaborealphonse75@gmail.com</a>
-      <a href="tel:+22675987367">(+226) 75 98 73 67</a>
-      <a href="https://kaborealpha.github.io" target="_blank" rel="noopener">kaborealpha.github.io</a>
-      <a href="https://kaborealpha.github.io/Portefolio/" target="_blank" rel="noopener">Portfolio ↗</a>
+      <div><div class="lbl">Email</div><a href="mailto:kaborealphonse75@gmail.com">kaborealphonse75@gmail.com</a></div>
+      <div><div class="lbl">Téléphone</div><a href="tel:+22675987367">(+226) 75 98 73 67</a></div>
+      <div><div class="lbl">Github</div><a href="https://kaborealpha.github.io" target="_blank" rel="noopener">kaborealpha.github.io</a></div>
+      <div><div class="lbl">Portfolio antérieur</div><a href="https://kaborealpha.github.io/Portefolio/" target="_blank" rel="noopener">Voir ↗</a></div>
     </div>
-    <div class="foot-bottom">
-      <span>KABORÉ Alphonse — Ouagadougou, Burkina Faso</span>
-      <span>Mis à jour le 29/06/2026</span>
-    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>KABORÉ Alphonse — Ouagadougou, Burkina Faso</span>
+    <span>Mis à jour le 29/06/2026</span>
   </div>
 </footer>
 
@@ -582,10 +531,9 @@
   const links = document.getElementById('navLinks');
   toggle.addEventListener('click', () => links.classList.toggle('open'));
   links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
-
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold:0.12 });
+  }, { threshold:0.08 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 
